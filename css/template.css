@@ -1,0 +1,195 @@
+/* latin-ext */
+@font-face {
+ font-family: 'Lato';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Lato Regular'), local('Lato-Regular'), local(../fonts/Lato/Lato-Regular.ttf) format('ttf');
+ unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+ font-family: 'Lato';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Lato Regular'), local('Lato-Regular'), local(../fonts/Lato/Lato-Regular.ttf) format('ttf');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.hairline{
+    font-weight: 100;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    padding-top: 50px;
+}
+h1{
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+}
+.navbar{
+    background-color: #F6F6F6;
+}
+navbar-brand{
+    position: absolute;
+    z-index: 99!important!
+}
+.navbar .nav{
+    text-transform: uppercase;
+}
+.navbar-fixed-top{
+    border: none;
+}
+/* main banner */
+.main-banner{
+    background:url(../images/banners/banner_01.jpg) no-repeat center center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+}
+.main-banner h1{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.main-banner .content-wrapper{
+    padding: 20px;
+    background:rgba(0, 113, 188, .7);
+    color: #FFF;
+    position: relative;
+    margin:20%;
+}
+
+/* section styling */
+.welcome{
+    background: #0071bc;
+    padding: 90px 0px;
+    color: #FFF;
+}
+.portfolio{
+    padding: 90px 0px;
+    color: #0071bc;
+}
+.team{
+    background:url(../images/team_bg.jpg) no-repeat center center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    padding: 90px 0px;
+    color: #FFF;
+}
+.contact{
+    background:url(../images/contact_bg.jpg) no-repeat center center;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    padding: 90px 0px;
+}
+.footer{
+    background: #0071bc;
+    padding: 30px 0px;
+}
+.footer, .footer a{
+    color: #FFF;
+}
+
+/* welcome */
+.welcome h3, .portfolio h3{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.welcome-msg{
+    font-size: 18px;
+    padding-bottom: 60px;
+}
+/* portfolio */
+.portfolio-item{
+    margin-bottom: 25px;
+}
+.portfolio .p-image{
+    background-color:#CCC;
+    min-height: 300px;
+}
+.portfolio h3{
+    padding: 20px;
+}
+.portfolio .p-tab{
+    background: none;
+    display: inline-block;
+    border:solid 1px #0071bc;
+    margin: 5px;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: #0071bc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.p-tab:hover{
+    color: #FFF;
+    background: #0071bc;
+}
+.portfolio .active-tab{
+    color: #FFF;
+    background: #0071bc;
+}
+
+/* team */
+.team h3{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 30px 0px 5px 0px;
+    margin: 0px;
+}
+.team .social{
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+.team .social a{
+    color: #FFF;
+    margin: 0px 2px;
+}
+
+/* contact */
+.contact{
+    font-weight: 300;
+    color: #0071bc;
+}
+.contact button{
+    color: #0071bc;
+}
+.contact .address{
+    font-size: 18px;
+}
+.contact .call{
+    font-size: 18px;
+    padding: 10px 0px;
+    margin-bottom: 35px;
+}
+.contact .form-control{
+    margin-top: 25px;
+}
+.contact textarea{
+    margin-bottom: 25px;
+}
