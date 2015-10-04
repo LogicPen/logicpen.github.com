@@ -1,0 +1,259 @@
+html,
+body {
+    margin: 0;
+    padding: 0;   
+}
+.myMainHolder {
+    width: 300px;
+    height: 600px;
+    position: relative;
+    overflow: hidden; 
+    background: #FFF ; 
+    opacity: 0;
+    border-style: solid;
+    border-color: #a7a9ac;
+    border-width: 1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#topBut {
+    width: 300px;
+    height: 600px;
+    opacity: 0;
+    background: #FFF;
+    border-style: none;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+#mainAni {
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+}
+
+#myBG{
+bottom: 0px;
+left: 0px;
+width: 300px;
+height: 531px;
+background: url("bg.jpg") no-repeat;
+position: absolute;
+-ms-transform-origin: 0% 0%;
+-webkit-transform-origin: 0% 0%; 
+transform-origin: 0% 0%;
+
+
+}
+
+.myHead1{
+    width: 450px;
+    height: 33px;
+    left: 20px;
+	position: absolute;
+	-ms-transform-origin: 0% 0%; /* IE 9 */
+	-webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+	transform-origin: 0% 0%;
+	-ms-transform: scale(.6, .6);
+	-webkit-transform: scale(.6, .6);
+	transform: scale(.6, .6);	
+	background: url("bonzai-vectors.png") no-repeat;
+	opacity: 0;
+
+}
+
+.effect{
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.myHead1C{
+    top: 154px;
+    left: -11px;
+    position: absolute;
+}
+
+#myHead1_0{
+top: 0px;
+opacity: 1;
+background-position: 0px 0px;
+}
+
+#myHead1_1{
+top: 26px;
+background-position: 0px -43px;
+}
+
+#myHead1_2{
+top: 52px;
+background-position: 0px -85px;
+}
+
+#myHead1_3{
+top: 78px;
+background-position: 0px -127px;
+}
+
+#myHead1_4{
+top: 104px;
+background-position: 0px -166px;
+}
+
+#myHead2_0{
+top: 0px;
+background-position: -450px 0px;
+}
+
+#myHead2_1{
+top: 28px;
+background-position: -450px -43px;
+}
+
+#myHead2_2{
+top: 54px;
+background-position: -450px -85px;
+}
+
+/* 0825 EDITS -->> */
+#myHead2_3{
+/*top: 170px;*/
+    top: 180px;
+    height:12px;
+    background-position: -450px -184px;
+    -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    transform-origin: 0% 0%;
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+/*#myHead2_4{
+    top: 420px;
+    height: 42px;
+    background-position: -450px -257px;    
+    -ms-transform-origin: 0% 0%; 
+    -webkit-transform-origin: 0% 0%; 
+    transform-origin: 0% 0%;
+    -ms-transform: scale(.52, .52);
+    -webkit-transform: scale(.52, .52);
+    transform: scale(.52, .52);
+    width: 510px;
+}*/
+
+#myHead2_4{
+/*top: 170px;*/
+    top: 420px;
+    height:12px;
+    background-position: -450px -208px;
+    -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    transform-origin: 0% 0%;
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+
+#myHead2_5{
+    top: 81px;
+    width: 147px;
+    height: 10px;
+    background-position: -450px -197px;
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    left: 141px;
+   
+
+}
+
+/* -->> 0825 EDITS */
+
+#myLogo{
+top: 12px;
+left: 242px;
+width: 74px;
+height: 74px;
+background-position: 0px -221px;
+opacity: 1;
+}
+
+#myLogo2{
+    top: 36px;
+    left: 11px;
+    width: 218px;
+    height: 32px;
+    background-position: -320px -303px;
+    opacity: 1;
+    -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform-origin: 0% 0%; /* Chrome, Safari, Opera */
+    transform-origin: 0% 0%;
+    -ms-transform: scale(.5, .5);
+    -webkit-transform: scale(.5, .5);
+    transform: scale(.5, .5);
+}
+
+
+#ctaCont{
+top: 293px;
+left: 11px;
+width: 196px;
+height: 31px;
+position: absolute;
+background: #f6831f;
+opacity: 0;
+}
+
+#ctaText{
+top: 10px;
+left: 9px;
+width: 234px;
+height: 20px;
+
+background-position: 0px -300px;
+position: absolute;
+-ms-transform: scale(.75, .75);
+-webkit-transform: scale(.75, .75);
+transform: scale(.75, .75);
+opacity: 1;
+}
+
+#bonzai-hero{
+    width: 411px;
+    height: 359px;
+    position: absolute;   
+    background: url(bonzai-hero.png) bottom left no-repeat;
+    image-rendering: -moz-crisp-edges;         
+    image-rendering:   -o-crisp-edges;        
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; 
+}
+
+#bonzai-footer {
+    position: absolute;
+    width: 300px;
+    height: 69px;
+    top: 0px;
+    left: 0px;
+    background: white;
+}
+
+#guide {
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 600px;
+    position: absolute;    
+}
+
+

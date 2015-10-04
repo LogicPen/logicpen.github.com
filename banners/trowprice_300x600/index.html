@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    #mainHolder {
+        /*display: none;*/
+        opacity: 0;
+        z-index: 20
+    }
+    
+     button {
+        background: none;
+        outline: 0;
+        border: 0;
+     }
+    </style>
+    <script type="text/javascript">
+      var clickTag = "http://www.troweprice.com/institutional";
+    </script>
+    <script language="javascript">
+
+    function pageLoadedHandler() {
+        if (isElementVisible( document.getElementById("mainHolder") )) {
+            adVisibilityHandler();
+        } else {
+            onVisibilityChange(document.getElementById("mainHolder"), adVisibilityHandler);
+        }
+    }
+
+    function isElementVisible(el) {
+        var rect     = el.getBoundingClientRect(),
+            vWidth   = window.innerWidth || doc.documentElement.clientWidth,
+            vHeight  = window.innerHeight || doc.documentElement.clientHeight,
+            efp      = function (x, y) { return document.elementFromPoint(x, y) };
+
+        // Return false if it's not in the viewport
+        if (rect.right < 0 || rect.bottom < 0
+                || rect.left > vWidth || rect.top > vHeight)
+            return false;
+
+        // Return true if any of its four corners are visible
+        return (
+              el.contains(efp(rect.left,  rect.top))
+          ||  el.contains(efp(rect.right, rect.top))
+          ||  el.contains(efp(rect.right, rect.bottom))
+          ||  el.contains(efp(rect.left,  rect.bottom))
+        );
+    }
+
+    function onVisibilityChange (el, callback) {
+        return function () {
+            console.log('visibility ' + isElementInViewport(el));
+        }
+    }
+
+    function _politeLoad(urls, onComplete) {
+        var l = urls.length,
+            loaded = 0,
+            checkProgress = function() {
+                if (++loaded === l && onComplete) {
+                    onComplete();
+                }
+            },
+            i;
+        for (i = 0; i < l; i++) {
+            _loadScript(urls[i], checkProgress);
+        }
+    }
+
+    function _loadScript(url, callback){
+
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState){  //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                        script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  //Others
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    function adVisibilityHandler() {
+        // Now that the ad is actual in a visible area, let's start this party.
+
+        /*
+        http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js
+        http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TimelineLite.min.js
+
+        http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js
+        http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js
+        */
+
+        //now you can just feed stuff into that one function and give it a callback...
+_politeLoad(['https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/TweenLite.min.js',
+    'https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/TimelineLite.min.js',
+    'https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/plugins/CSSPlugin.min.js',
+    'https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/easing/EasePack.min.js',
+    'script.js'
+        ], function() {
+            console.log('ready');
+            myStartAni();
+        });
+
+        //Load in CSS
+        var extCSS = document.createElement('link');
+        extCSS.setAttribute("rel", "stylesheet");
+        extCSS.setAttribute("type", "text/css");
+        extCSS.setAttribute("href", "style.css");
+        document.getElementsByTagName("head")[0].appendChild(extCSS);
+        /*document.getElementById("mainHolder").style.opacity = 0;*/
+        document.getElementById("mainHolder").style.display = "block";
+    }
+    </script>
+</head>
+
+<body onload="pageLoadedHandler();">
+    <div id="mainHolder" class="myMainHolder">
+    	<div id="myBG" style='background-image: url(bg.jpg);'></div>
+       	<div id="mainAni">
+       		<div id="guide"></div>
+       		<div id="bonzai-footer"></div>
+       		<div class="myHead1C">
+       			<div id="myHead1_0" class="myHead1"></div>
+       			<div id="myHead1_1" class="myHead1"></div>
+       			<div id="myHead1_2" class="myHead1"></div>
+       			<div id="myHead1_3" class="myHead1"></div>
+       			<div id="myHead1_4" class="myHead1"></div>
+       		</div>
+       		
+     		<div class="myHead1C">
+       			<div id="myHead2_0" class="myHead1"></div>
+       			<div id="myHead2_1" class="myHead1"></div>
+       			<div id="myHead2_2" class="myHead1"></div>
+       			<div id="myHead2_3" class="myHead1"></div>
+            <div id="myHead2_4" class="myHead1"></div> <!-- 0825 EDITS -->
+
+       		</div>
+       		<div id="myHead2_5" class="myHead1 effect"></div>
+       		<div id="myLogo2" class="myHead1"></div>
+       		<div id="myLogo" class="myHead1" style='background-image: url(bonzai-vectors.png);'></div>
+            <div id="bonzai-hero"></div>
+       	</div><!--end mainAni--> 
+       	
+       	<div id="ctaCont">
+       		<div id="ctaText" class="myHead1"></div>
+       	</div>
+       	<button id="topBut"></button>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("topBut").onclick = function() {
+         window.open(window.clickTag);
+         }
+    </script>
+</body>
+</html>
+
